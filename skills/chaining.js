@@ -8,7 +8,7 @@ controller.hears('?', 'message_received', function(bot, message){
         convo.ask('Which is more offensive? Book burning or flag burning?', function(res, convo){
             convo.ask('How often do you keep your promises?', function(res, convo){
                 convo.ask('Which is bigger? The Sun or the Earth?', function(res, convo){
-                    conov.say('Thank you, that is all for now â¤')})})
+                    convo.say('Thank you, that is all for now â¤')})})
         })
     })
 })
