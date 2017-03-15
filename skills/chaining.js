@@ -23,4 +23,33 @@ controller.hears('qq', 'message_received', function(bot, message){
         })
 })
 
+
+    controller.hears('thread', 'message_received', function(bot, message){
+        bot.createConversation(message, function(err, convo){
+
+            convo.addMessage('Charmed to meet you, lets get to know one another!')
+        
+            convo.addQuestion('How much do you like robots?', function(res, convo){
+                convo.goToThread('q2')
+            }, 'default')
+            
+            
+            convo.addQuestion('Do you like your job?', function(res, convo){
+                convo.goToThread('q3')
+            }, 'q2')
+
+            convo.addQuestion('How much glucose and energy does your body generate per hour?', function(res, convo){
+                convo.goToThread('end')
+            }, 'q3')
+
+            
+            convo.addMessage('Okay thank you very much for the valuable info, human.', 'end')
+            
+        })
+    })
+
+
 }
+
+
+
