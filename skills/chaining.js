@@ -30,16 +30,16 @@ controller.hears('qq', 'message_received', function(bot, message){
             convo.addMessage('Charmed to meet you, lets get to know one another!')
         
             convo.addQuestion('How much do you like robots?', function(res, convo){
-                convo.goToThread('q2')
+                convo.gotoThread('q2')
             }, 'default')
             
             
             convo.addQuestion('Do you like your job?', function(res, convo){
-                convo.goToThread('q3')
+                convo.gotoThread('q3')
             }, 'q2')
 
             convo.addQuestion('How much glucose and energy does your body generate per hour?', function(res, convo){
-                convo.goToThread('end')
+                convo.gotoThread('end')
             }, 'q3')
 
             
